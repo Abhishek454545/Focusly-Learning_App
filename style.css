@@ -1,0 +1,735 @@
+.logo{
+    display: flex;
+    flex-direction: row;
+}
+.logo h1{
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(80, 80, 165);
+
+}
+html{
+    scroll-padding-top: 120px;
+    }
+#tm{
+    background-color: #080808;
+    width: 30px;
+}
+#tm {
+    display: none;
+}
+
+.hamburger {
+    width: 35px;
+    cursor:pointer;
+    display: none; 
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+    top: 0;
+    z-index: 999;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 150px;
+}
+.menu{
+    margin: 30px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.menu a{
+    color: black;
+    transition: all 0s linear 0s;
+}
+#button{
+    height: 40px;
+     background-color: blue;
+     border-radius: 20px;
+     margin: 20px;
+     margin-right: 65px;
+     transition: all 0s linear 0s;
+}
+#button a{
+    color: white;
+}
+#button:hover{
+    background-color: rgb(87, 87, 192);
+    transform: scale(1.1);
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.menu a:hover{
+    transform: scale(1.3);
+    background-color: beige;
+}
+
+@media(max-width:900px){
+    *{
+        margin: 0;
+        padding: 0;
+        padding-left: 2px;
+        padding-top: 2px;
+        padding-right: 2px;
+    }
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin: 0px;
+        padding: 0px;
+        gap: 3px;
+        position: sticky;
+        border: 2px solid black;
+        width: auto;
+        height: auto;
+        
+    }
+    .contact{
+        display: none;
+    }
+    
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: start;
+        width: auto;
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        
+        }
+    html{
+            scroll-padding-top: 120px;
+        }
+    .menu{
+        display: none;
+
+        
+    }
+    .hamburger{
+        display: block;
+    }
+     #tm:checked ~ .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    #tm:checked~.contact{
+        display: flex;
+    }
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 80px;
+    padding: 80px;
+    animation: animate 1s ease 0s 1 ;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@media(min-width:900px) and (max-width:1190px)
+{
+    .nav{
+        height: 80px;
+    }
+    .main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: start;
+        gap: 0px;
+    }
+    .menu{
+        flex-wrap: nowrap;
+    }
+}
+.c1{
+     
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+.f1 h2{
+    color:indigo;
+}
+.f2 h1{
+    font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 350px;
+}
+.f3 p{
+    width: 500px;
+    text-align: justify;
+    font-size: large;
+}
+.button{
+    padding-top: 10px;
+}
+#button1{
+    border-radius: 10px;
+    background-color: rgb(58, 15, 179);
+    padding: 25px;
+    border: none;
+    color: white;
+    transition: all 0s ease 0s;
+}
+#button1:hover{
+    background-color: rgb(131, 71, 131);
+}
+#button2{
+    border-radius: 10px;
+    background-color:black;
+    padding: 25px;
+    border: none;
+    color: white;
+    transition: all 0s ease 0s;
+}
+#button2:hover{
+    background-color: rgb(36, 35, 36);
+}
+.img1{
+    padding: 20px;
+}
+#image{
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 2px black;
+}
+@media(max-width:600px)
+{
+    .container{
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .f1 h2{
+        text-align: center;
+        font-size: larger;
+        width: auto;
+    }
+    .f2 h1{
+        text-align: center;
+        width: auto;
+    }
+    .f3 p{
+        text-align: center;
+        width: auto;
+    }
+    .button{
+        text-align: center;
+    }
+    .img1{
+        padding: 5px;
+        text-align: center;
+        
+    }
+    #image{
+        text-align: center;
+        width: 250px;
+        height: 250px;
+    }
+}
+@media(min-width:601px) and (max-width:700px)
+{
+    #image{
+        width: 250px;
+        height: 250px;
+
+    }
+    .container{
+        gap:20px
+    }
+}
+.content2{
+     display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  
+  animation: animate 1s ease 0s 1 ;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.content2 h1{
+    font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 30px;
+  text-align: center;
+}
+.company{
+    background-color: grey;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 5px;
+    width: 700px;
+    border-radius: 10px;
+    margin-left: 300px;
+   }
+.company p{
+    font-size: 25px;
+    padding: 30px;
+}
+@media(min-width:300px) and (max-width:700px)
+{
+    .content2{
+        margin: auto;
+        padding: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        width: 100%;
+        height: auto;
+    }
+    .company{
+        margin: 0px;
+        display: grid;
+        grid-template-columns: repeat(2,0fr);
+        grid-template-rows: repeat(2,0fr);
+        width: 300px;
+        height: auto;
+        gap: 0px;
+        padding-right: 30px;
+        background-color: rgb(216, 215, 215);
+    }
+    .content2 h1{
+        margin: 0px;
+        padding: auto;
+        text-align: start;
+        font-size: 25px;
+
+    }
+
+}
+.heading{
+    font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+    margin-top: 80px;
+    text-align: center;
+}
+.content3{
+    margin: 0px;
+    animation: animate 1s ease 0s 1 ;
+}
+.grid{
+    margin-left: 300px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2,0.36fr);
+    gap: 20px;
+}
+.pl{padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    background-color: rgb(79, 132, 247);
+    width: 300px;
+    color: white;
+}
+.pl h2{
+    margin: 5px;
+}
+.pl p{
+    margin: 5px;
+    width: 200px;
+    text-align: justify;
+    
+}
+.af{padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    background-color:rgb(223, 8, 43);
+    width: 300px;
+    color: white;;
+    margin: 0px;
+    padding: 0px;
+}
+.af h2{
+    margin: 5px;
+}
+.af p{
+    margin: 5px;
+    width: 200px;
+    text-align: justify;
+    
+}
+.p{padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    background-color:rgb(243, 188, 5);
+    width: 300px;
+    color: white;;
+    margin: 0px;
+    padding: 0px;
+}
+.p h2{
+    margin: 5px;
+}
+.p p{
+    margin: 5px;
+    width: 200px;
+    text-align: justify;
+    
+}
+.it{padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    background-color:rgb(8, 180, 143);
+    width: 300px;
+    color: white;;
+    margin: 0px;
+    padding: 0px;
+}
+.it h2{
+    margin: 5px;
+}
+.it p{
+    margin: 5px;
+    width: 200px;
+    text-align: justify;
+    
+}
+.support{padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    background-color:green;
+    width: 300px;
+    color: white;;
+    margin: 0px;
+    padding: 0px;
+}
+.support h2{
+    margin: 5px;
+}
+.support p{
+    margin: 5px;
+    width: 200px;
+    text-align: justify;
+    
+}
+.ai
+{padding-top: 50px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    background-color:rgb(82, 7, 82);
+    width: 300px;
+    color: white;;
+    margin: 0px;
+    padding: 0px;
+}
+.ai h2{
+    margin: 5px;
+}
+.ai p{
+    margin: 5px;
+    width: 200px;
+    text-align: justify;
+    
+}
+@media(min-width:300px) and (max-width:700px)
+{
+   .heading{
+    text-align: start;
+   } 
+   .grid{
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(1,1fr);
+    margin: auto;
+   }
+}
+.heading2{
+     font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+    margin-top: 80px;
+    text-align: center;
+}
+.content4{
+    margin: 0px;
+    animation: animate 1s ease 0s 1 ;
+}
+.grid1{
+    margin-left: 100px;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(3,0.3fr);
+    gap: 20px;
+    animation: animate 1s ease 0s 1 ;
+}
+.row1 {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+    background-color:rgb(243, 238, 238);
+    width: 300px;
+    color: black;;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+    transition: all 0s ease 0s;
+    border-radius: 10px;
+
+}
+.row1:hover{
+    border: 1px solid purple;
+    transform: scale(1.05);
+}
+.row1 p{
+    padding: 20px;
+    padding-bottom: 0px;
+}
+.row1 img{
+    border-radius: 100px;
+}
+.row1 h1{
+    margin: 0px;
+}
+#user_info{
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 15px;
+}
+@media(min-width:300px) and (max-width:700px)
+{
+    .grid1{
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(1,1fr);
+    
+    }
+    .heading2{
+        text-align: start;
+    }
+    .content4{
+        padding: 0px;
+        margin: 0px;
+    }
+    .grid1{
+        margin: 5px;
+    }
+    .row1
+    {width: 290px;}
+}
+.images{
+    padding-top: 50px;
+}
+.update h1{
+    color: rgb(86, 8, 114);
+    padding-top: 0px;
+    font-size: 50px;
+    padding-left: 50px;
+}
+.updates{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation: animate 1s ease 0s 1 ;
+}
+#form{
+    display: flex;
+    flex-direction: row;
+}
+.update{
+    background-color: rgb(240, 239, 239);
+    height: 350px;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+.update p
+{
+padding-left: 50px;
+    font-size: 20px;
+}
+.button{
+    padding: 0px;
+    padding-left: 10px;
+}
+.button_n
+{color: white;
+    padding: 10px;
+border-radius: 10px;
+    background-color: rgb(86, 8, 114);
+    transition: all 0.5s ease 0s;
+}
+.button_n:hover{
+transform: scale(1.05);
+}
+#email{
+    height: 30px;
+    margin-left: 50px;
+    transition: all 0.5s ease 0s;
+}
+#email:hover{
+    transform: scale(1.05);
+}
+#para u{
+    color: blue;
+}
+@media(min-width:300px) and (max-width:700px)
+{
+    #im12{
+        height: 300px;
+        width: 290px;
+        padding-top: 50px;
+    }
+    .images{
+        margin: 0px;
+        padding: 0px;
+    }
+    .update p{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #para{
+        padding-top: 10px;
+    }
+    .update{
+height: auto;
+    }
+}
+.footer{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    animation: animate 1s ease 0s 1 ;
+}
+.f_container{
+    margin-top: 50px;
+    width: 100%;
+    background-color: rgb(243, 238, 238);
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(5,1fr);
+    
+}
+.first{
+    padding-top: 30px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.first h1{
+font-size: 60px;
+}
+.first p{
+font-size: 20px;
+}
+.icon{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 15px;
+}
+.f{
+    text-align: center;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.companyy{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.supportt{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.legal{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+@media(min-width:300px) and (max-width:700px)
+{
+    .f_container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        
+    }
+    .first{
+        gap: 20px;
+    }
+    .f{
+        margin-top: 30px ;
+    }
+}
